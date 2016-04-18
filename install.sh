@@ -5,11 +5,11 @@
 
 echo "------------ Welcome to the Flashcard-App server installer. ------------"
 
-# sudo apt-get update
+sudo apt-get update
 
 echo "------------------ Installing Node.js, NPM, and Vim. -------------------"
 
-# sudo apt-get install nodejs npm vim 
+sudo apt-get install nodejs npm vim 
 
 num=0
 until ( [[ "$num" -ge 1 ]] && [[ "$num" -le 3 ]] )
@@ -23,13 +23,13 @@ done
 
 if ( [[ "$num" == '1' ]] ); then
   echo "Downloading and installing TeacherUI server."
-  # Call the TeacherUI script
+  ./teacherUI-install.sh
 elif ( [[ "$num" == '2' ]] ); then
   echo "Downloading and installing Recorder server."
-  # Call the Recorder script
+  ./recorder-install.sh
 elif ( [[ "$num" == '3' ]] ); then
   echo "Downloading and installing MongoDB by itself."
-  # Call the MongoDB script
+  ./mongodb-install.sh
 fi
 
 echo "------------------------ Installation complete! ------------------------"
