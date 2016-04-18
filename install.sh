@@ -3,7 +3,11 @@
 # Sets up Ubuntu for the flashcard-application.
 # Written by Marc Bacvanski
 
+echo "------------ Welcome to the Flashcard-App server installer. ------------"
+
 # sudo apt-get update
+
+echo "------------------ Installing Node.js, NPM, and Vim. -------------------"
 
 # sudo apt-get install nodejs npm vim 
 
@@ -18,13 +22,15 @@ do
 done
 
 if ( [[ "$num" == '1' ]] ); then
-  echo "Installing dependencies for TeacherUI type server."
+  echo "Downloading and installing TeacherUI server."
   # Call the TeacherUI script
 elif ( [[ "$num" == '2' ]] ); then
-  echo "Installing dependencies for Recorder type server."
+  echo "Downloading and installing Recorder server."
   # Call the Recorder script
 elif ( [[ "$num" == '3' ]] ); then
-  echo "Installing dependencies for MongoDB by itself."
+  echo "Downloading and installing MongoDB by itself."
   # Call the MongoDB script
 fi
+
+echo "------------------------ Installation complete! ------------------------"
 
