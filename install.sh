@@ -23,13 +23,19 @@ done
 
 if ( [[ "$num" == '1' ]] ); then
   echo "Downloading and installing TeacherUI server."
-  ./teacherUI-install.sh
+  chmod +x teacherui-install.sh
+  ./teacherui-install.sh
+  chmod -x teacherui-install.sh
 elif ( [[ "$num" == '2' ]] ); then
   echo "Downloading and installing Recorder server."
+  chmod +x recorder-install.sh
   ./recorder-install.sh
+  chmod -x recorder-install.sh
 elif ( [[ "$num" == '3' ]] ); then
   echo "Downloading and installing MongoDB by itself."
+  chmod +x mongodb-install.sh
   ./mongodb-install.sh
+  chmod -x mongodb-install.sh
 fi
 
 echo "------------------------ Installation complete! ------------------------"
