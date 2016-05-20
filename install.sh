@@ -9,7 +9,11 @@ sudo apt-get update
 
 echo "------------------ Installing Node.js, NPM, and Vim. -------------------"
 
-sudo apt-get install nodejs npm vim 
+sudo apt-get install nodejs npm vim libcap2-bin
+
+# Allows Node to run on ports lower than 1024 (especially port 80)
+# Otherwise, run Node with sudo privileges.
+sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 
 num=0
 until ( [[ "$num" -ge 1 ]] && [[ "$num" -le 3 ]] )
