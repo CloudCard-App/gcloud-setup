@@ -40,6 +40,8 @@ elif ( [[ "$num" == '3' ]] ); then
   chmod +x mongodb-install.sh
   ./mongodb-install.sh
   chmod -x mongodb-install.sh
+  echo "To run mongoDB, execute:"
+  echo "sudo mkdir $HOME/db ; sudo mongod --dbpath $HOME/db --port 80"
 fi
 
 echo "------------------------ Installation complete! ------------------------"
