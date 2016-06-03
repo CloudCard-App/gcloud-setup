@@ -8,6 +8,11 @@ sudo apt-get install -y nodejs npm
 
 echo "----------------- Finished installing Node.js and NPM. -----------------"
 
+npm install -g n
+sudo n stable
+
+echo "---------------------- Updating Node.js complete. ----------------------"
+
 mkdir ~/Servers
 cd ~/Servers/
 
